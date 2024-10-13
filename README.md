@@ -14,4 +14,5 @@ This library provides an implementation of the [FDC3](https://fdc3.finos.org) (F
 Install the package via npm:
 
 ```bash
-npm install fdc3-steel-desktop-agent
+npm install fdc3-steel
+```
