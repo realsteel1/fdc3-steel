@@ -14,7 +14,7 @@ import {
 import { MessageRouter } from './model/message-router';
 
 export class Fdc3SteelDesktopAgent implements DesktopAgent {
-  constructor(private readonly messageRouter: MessageRouter) { }
+  constructor(private readonly messageRouter: MessageRouter) {}
 
   open(name: unknown, context?: unknown): Promise<import('@finos/fdc3').AppIdentifier> {
     throw new Error('Method not implemented.');
@@ -86,19 +86,22 @@ export class Fdc3SteelDesktopAgent implements DesktopAgent {
     throw new Error('Method not implemented.');
   }
 
-  getInfo(): Promise<ImplementationMetadata> {
+  async getInfo(): Promise<ImplementationMetadata> {
     throw new Error('Method not implemented.');
   }
 
-  getAppMetadata(app: AppIdentifier): Promise<AppMetadata> {
+  async getAppMetadata(app: AppIdentifier): Promise<AppMetadata> {
     throw new Error('Method not implemented.');
   }
 
+  /**
+   * @deprecated See getUserChannels
+   */
   getSystemChannels(): Promise<Array<Channel>> {
     throw new Error('Method not implemented.');
   }
 
-  joinChannel(channelId: string): Promise<void> {
+  async joinChannel(channelId: string): Promise<void> {
     throw new Error('Method not implemented.');
   }
 }
